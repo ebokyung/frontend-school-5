@@ -1,0 +1,101 @@
+<!-- 코드 정리 필요 -->
+
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button 동적 가상 선택자</title>
+
+    <!-- CSS -->
+    <style>
+        [class^='btn'] {
+            width: 88px;
+            height: 32px;
+
+            background: #343F50;
+            border: 1px solid #1A202C;
+            color: #CBD5DF;
+
+            box-shadow: inset 1px 1px rgba(26, 32, 44, 1);
+        }
+
+        /* disabled가 아니고 hover일때  방법1 */
+        [class^='btn']:not(:disabled):hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        .btn:active {
+            text-decoration: underline;
+            box-shadow: inset 1px 1px #262F3E;
+        }
+
+        .btn:disabled {
+            box-shadow: none;
+            color: #4A5568;
+            /* 방법2 */
+            /* text-decoration: none; */
+            background: #3A4556;
+            border: 1px solid #343e4e;
+        }
+
+        .btn:focus {
+            outline: none;
+            border: 1px solid #439AFF;
+        }
+
+        /* -------- 파랑 ----------- */
+        [class$="positive"] {
+            color: #439AFF;
+        }
+
+        .btn-positive:hover,
+        .btn-positive:active {
+            background: #439AFF;
+            border: 1px solid #439AFF;
+        }
+
+        .btn-positive:hover {
+            box-shadow: inset 1px 1px #73B4FF;
+        }
+
+        .btn-positive:active {
+            box-shadow: inset 1px 1px #3B78BE
+        }
+
+        /* ---------- 빨강 ---------- */
+        [class$="negative"] {
+            color: #EB5757;
+        }
+
+        .btn-negative:hover,
+        .btn-negative:active {
+            background: #EB5757;
+            border: 1px solid #EB5757;
+        }
+
+        .btn-negative:hover {
+            box-shadow: inset 1px 1px #FD6F6F;
+        }
+
+        .btn-negative:active {
+            box-shadow: inset 1px 1px #D94242
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn" type="button">button</button>
+    <button class="btn-positive" type="button">Yes</button>
+    <button class="btn-negative" type="button">Del</button>
+    <button class="btn" type="button" disabled>button</button>
+
+    <!-- 속성 선택자 예제 -->
+    <p class="message-negative">error 메시지</p>
+    <p class="message-positive">가입가능합니다</p>
+</body>
+
+</html>
