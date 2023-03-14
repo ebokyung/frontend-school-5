@@ -1,0 +1,310 @@
+body {
+    background-color: #5AA263;
+}
+
+.otter {
+    width: 600px;
+    height: 600px;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.otter .fish {
+    width: 162px;
+    height: 71px;
+    border-radius: 100%;
+    background-color: #54C6F6;
+
+    position: absolute;
+    top: 24%;
+    left: 48%;
+    transform: translate(-50%) rotate(10deg);
+
+    z-index: 2;
+}
+
+.fish-tail {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-right: 55px solid #54C6F6;
+    border-bottom: 30px solid transparent;
+    border-left: 55px solid transparent;
+
+    position: absolute;
+    top: 50%;
+    right: -13%;
+    transform: translateY(-50%);
+}
+
+.otter .ear {
+    background-color: #B8A795;
+    width: 62px;
+    height: 40px;
+
+    position: absolute;
+    top: 35%;
+
+    box-shadow: 0 -3px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ear.left {
+    position: absolute;
+    left: 27%;
+    border-radius: 45% 0 0 45%;
+
+    transform: rotate(4deg);
+}
+
+.ear.right {
+    position: absolute;
+    right: 27%;
+    border-radius: 0 45% 45% 0;
+
+    transform: rotate(-3deg);
+}
+
+.otter .face,
+.otter .face-bottom {
+    background-color: #BDAFA1;
+
+}
+
+.face {
+    width: 280px;
+    height: 235px;
+    border-radius: 240px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.face-bottom {
+    width: 318px;
+    height: 162px;
+    border-radius: 240px;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pattern {
+    width: 260px;
+    height: 115px;
+    background-color: #EBEBEB;
+    border-radius: 120px 120px 100px 100px / 100px 100px 80px 80px;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.face .eyebrow {
+    width: 39px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.face .eyebrow.left {
+    position: absolute;
+    top: 40px;
+    left: 25%;
+
+    transform: rotate(15deg);
+}
+
+.face .eyebrow.right {
+    position: absolute;
+    top: 40px;
+    right: 25%;
+
+    transform: rotate(-15deg);
+}
+
+.face .eye {
+    width: 22px;
+    height: 18px;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.face .eye.left {
+    position: absolute;
+    top: -2px;
+    left: 28%;
+}
+
+.face .eye.right {
+    position: absolute;
+    top: -2px;
+    right: 28%;
+}
+
+.face .nose {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+
+    z-index: 2;
+}
+
+.face .nose .black {
+    width: 57px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: #000;
+
+    position: absolute;
+    left: 50%;
+    top: -5px;
+    transform: translateX(-50%);
+
+    z-index: 2;
+}
+
+.nose .black::before {
+    content: '';
+    display: block;
+
+    width: 9px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: rotate(10deg);
+
+    margin-top: 6px;
+    margin-left: 65%;
+}
+
+.face .nose .white {
+    width: 90px;
+    height: 57px;
+    background-color: #fff;
+}
+
+.face .nose .white.left {
+    transform: rotate(-8deg);
+    border-radius: 50% 40% 40% 50%;
+}
+
+.face .nose .white.left img {
+    transform: scaleX(-1);
+    position: absolute;
+    top: 12px;
+    left: 30px;
+}
+
+.face .nose .white.right {
+    transform: rotate(8deg);
+    border-radius: 40% 50% 50% 40%;
+}
+
+.face .nose .white.right img {
+    position: absolute;
+    top: 12px;
+    right: 30px;
+}
+
+.face .mouth {
+    width: 17px;
+    height: 3px;
+    border-radius: 8px;
+    background-color: #000;
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+
+    z-index: 3;
+}
+
+.face .cheek {
+    width: 60px;
+    height: 32px;
+    background-color: #F1D0EA;
+    border-radius: 50%;
+}
+
+.face .cheek.left {
+    position: absolute;
+    top: 20px;
+    left: 12%;
+}
+
+.face .cheek.right {
+    position: absolute;
+    top: 20px;
+    right: 12%;
+}
+
+
+
+/*  */
+
+.face .whisker {
+    height: 10px;
+    box-shadow: 0 -2px 0 1.2px #393430;
+    border-radius: 50%;
+
+    position: absolute;
+    z-index: 3;
+}
+
+.face .whisker.top {
+    width: 51px;
+    top: 40px;
+}
+
+.face .whisker.middle {
+    width: 48px;
+    top: 52px;
+}
+
+.face .whisker.bottom {
+    width: 46px;
+    top: 66px;
+}
+
+
+.face .whisker.left.top {
+    left: 13%;
+    transform: rotate(-28deg);
+}
+
+.face .whisker.left.middle {
+    left: 15%;
+    transform: rotate(-35deg);
+}
+
+.face .whisker.left.bottom {
+    left: 17%;
+    transform: rotate(-45deg);
+}
+
+.face .whisker.right.top {
+    right: 13%;
+    transform: rotate(28deg);
+}
+
+.face .whisker.right.middle {
+    right: 15%;
+    transform: rotate(35deg);
+}
+
+.face .whisker.right.bottom {
+    right: 17%;
+    transform: rotate(45deg);
+}
