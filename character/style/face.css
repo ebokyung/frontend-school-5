@@ -4,12 +4,13 @@ body {
 
 .otter {
     width: 600px;
-    height: 600px;
+    height: 900px;
 
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%);
+    
 }
 
 .otter .fish {
@@ -19,11 +20,12 @@ body {
     background-color: #54C6F6;
 
     position: absolute;
-    top: 24%;
+    top: 12%;
     left: 48%;
     transform: translate(-50%) rotate(10deg);
 
     z-index: 2;
+    box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
 .fish-tail {
@@ -41,12 +43,12 @@ body {
 }
 
 .otter .ear {
-    background-color: #B8A795;
+    background-color: #605852;
     width: 62px;
     height: 40px;
 
     position: absolute;
-    top: 35%;
+    top: 20%;
 
     box-shadow: 0 -3px 20px 5px rgba(0, 0, 0, 0.2);
 }
@@ -69,7 +71,7 @@ body {
 
 .otter .face,
 .otter .face-bottom {
-    background-color: #BDAFA1;
+    background-color: #7B6F62;
 
 }
 
@@ -79,14 +81,14 @@ body {
     border-radius: 240px;
 
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .face-bottom {
     width: 318px;
-    height: 162px;
+    height: 165px;
     border-radius: 240px;
 
     position: absolute;
@@ -95,7 +97,7 @@ body {
     transform: translateX(-50%);
 }
 
-.pattern {
+.face .pattern {
     width: 260px;
     height: 115px;
     background-color: #EBEBEB;
@@ -116,7 +118,7 @@ body {
 
 .face .eyebrow.left {
     position: absolute;
-    top: 40px;
+    top: 15%;
     left: 25%;
 
     transform: rotate(15deg);
@@ -124,7 +126,7 @@ body {
 
 .face .eyebrow.right {
     position: absolute;
-    top: 40px;
+    top: 15%;
     right: 25%;
 
     transform: rotate(-15deg);
@@ -253,7 +255,6 @@ body {
 
 
 /*  */
-
 .face .whisker {
     height: 10px;
     box-shadow: 0 -2px 0 1.2px #393430;
