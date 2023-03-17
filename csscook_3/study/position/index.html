@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>06 Position</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #ddd;
+        }
+
+        .grand-father {
+            background-color: #eee;
+            width: 800px;
+            margin: 0 auto;
+            padding: 1px;
+
+            position: absolute;
+        }
+
+        .father {
+            background-color: white;
+            width: 300px;
+            height: 200px;
+            margin: 50px auto;
+        }
+
+        /*  */
+        .children {
+            width: 100px;
+            height: 100px;
+
+            /* margin-left: -50px; */
+            /* transform: translate(-50px) */
+            position: relative;
+            left: -50px;
+        }
+
+        /*  */
+        .pos {
+            background-color: orange;
+            position: absolute;
+            inset: 0;
+            margin: 0;
+            opacity: 0.5;
+            transition: all .4s;
+        }
+
+        .pos:hover {
+            margin: -20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grand-father">
+        <div class="father">
+            <!-- <img class="children" src="img.png">ypgcs -->
+            <div class="pos">POS</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
