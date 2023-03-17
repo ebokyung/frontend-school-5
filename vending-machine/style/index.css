@@ -10,6 +10,8 @@ main {
     grid-template-areas:
         "a b"
         "a c";
+    grid-template-rows: 1fr 9fr;
+        gap: 20px;
 }
 
 .section-a {
@@ -25,4 +27,42 @@ main {
 .section-c {
     grid-area: c;
     background-color: seagreen;
+}
+@media (max-width: 360px) {
+    main {
+        display: grid;
+        grid-template-areas:
+            "a"
+            "b"
+            "c";
+        grid-template-rows: 9fr 1fr 9fr;
+        gap: 20px;
+    }
+}
+
+/* style  */
+.wrapper {
+    width: 750px;
+    margin: 0 auto 170px;
+}
+
+header {
+    margin-bottom: 67px;
+}
+
+header .logo {
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 360px) {
+    .wrapper {
+        width: auto;
+        min-width: 306px;
+        margin: 0 27px 27px;
+    }
+
+    header .logo {
+        width: 165px;
+    }
 }
