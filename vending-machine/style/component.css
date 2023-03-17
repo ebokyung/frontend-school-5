@@ -1,0 +1,176 @@
+/* reset */
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+:root {
+    --main-color: #EAE8FE;
+    --point-color: #6327FE;
+}
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+body {
+    background-color: salmon;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/* 자판기 아이템 */
+.vm-item {
+    /* width: 94px;
+    height: 130px; */
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 12px;
+}
+
+.vm-item .name {
+    font-size: 9px;
+    line-height: 13px;
+}
+
+.vm-item .name {
+    margin-top: 6px;
+    margin-bottom: 7px;
+}
+
+.vm-item .price {
+    background-color: var(--point-color);
+    border-radius: 50px;
+    padding: 5px 15px;
+    color: #fff;
+
+    font-size: 12px;
+}
+
+/* 선택 목록 중 하나 아이템 */
+.vm-item-li {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.vm-item-li .img {
+    width: 18px;
+    height: 33px;
+    margin-right: 10px;
+}
+
+.vm-item-li .name {
+    font-size: 9px;
+    line-height: 13px;
+}
+
+.vm-item-li .count {
+    margin-left: auto;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    text-align: center;
+
+    position: relative;
+}
+
+.vm-item-li .count span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* 잔액, 소지금 안내 */
+.info {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 6px 10px;
+}
+
+.info .title {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.info .cash {
+    /* font-weight: 700; */
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* 버튼 */
+.btn {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+
+    background-color: transparent;
+    padding: 6px auto 7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-style: none;
+}
+
+.btn p {
+    font-size: 13px;
+    line-height: 19px;
+}
+
+
+/* 선택 목록 전체 컨테이너 */
+.item-list-container {
+    padding: 12px;
+    overflow-y: scroll;
+
+    background-color: var(--main-color);
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+}
+
+.item-list-container::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
+
+.item-list-container::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.item-list-container li {
+    margin-bottom: 6px;
+}
+
+.item-list-container li:last-child {
+    margin-bottom: 0;
+}
