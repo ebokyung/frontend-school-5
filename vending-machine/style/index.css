@@ -13,7 +13,7 @@ main {
     grid-template-areas:
         "a b"
         "a c";
-    grid-template-rows: 1fr 9fr;
+    grid-template-rows: 50px 474px;
     grid-template-columns: repeat(2, 360px);
         gap: 20px;
 }
@@ -47,8 +47,8 @@ main {
             "a"
             "b"
             "c";
-        grid-template-rows: 9fr 1fr 9fr;
-        gap: 20px;
+        grid-template-rows: 545px 50px 474px;
+            gap: 0;
     }
 }
 
@@ -71,7 +71,7 @@ header .logo {
     .wrapper {
         width: auto;
         min-width: 306px;
-        /* margin: 0; */
+        margin: 0;
     }
 
     header .logo {
@@ -79,7 +79,7 @@ header .logo {
     }
 }
 /* section-a */
-.sale-items {
+.section-a .sale-items {
     width: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -87,7 +87,7 @@ header .logo {
     margin-bottom: 20px;
 }
 
-.checkout {
+.section-a .checkout {
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -95,6 +95,22 @@ header .logo {
     gap: 12px;
 }
 
+.section-a .checkout .input-cash {
+    padding: 6px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+}
+
+.section-a .checkout .input-cash::placeholder {
+    color: #BDBDBD;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.section-a .checkout .btn.get {
+    background-color: var(--point-color);
+    color: #fff;
+}
 /* section-c */
 .section-c-title {
     text-align: center;
@@ -112,5 +128,5 @@ header .logo {
     font-size: 12px;
     line-height: 17px;
     text-align: right;
-    margin-top: 6px;
+    margin-top: 8px;
 }
