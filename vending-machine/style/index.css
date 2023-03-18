@@ -1,3 +1,6 @@
+h2 {
+    margin: 0;
+}
 /* layout */
 .wrapper {
     display: flex;
@@ -11,22 +14,31 @@ main {
         "a b"
         "a c";
     grid-template-rows: 1fr 9fr;
+    grid-template-columns: repeat(2, 360px);
         gap: 20px;
+}
+.section-a,
+.section-b,
+.section-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
 }
 
 .section-a {
     grid-area: a;
-    background-color: gold;
+        padding: 31px 27px 28px;
 }
 
 .section-b {
     grid-area: b;
-    background-color: salmon;
+        padding: 9px 27px;
 }
 
 .section-c {
     grid-area: c;
-    background-color: seagreen;
+    padding: 25px 27px;
 }
 @media (max-width: 360px) {
     main {
@@ -59,10 +71,46 @@ header .logo {
     .wrapper {
         width: auto;
         min-width: 306px;
-        margin: 0 27px 27px;
+        /* margin: 0; */
     }
 
     header .logo {
         width: 165px;
     }
+}
+/* section-a */
+.sale-items {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.checkout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 32px 32px 106px;
+    gap: 12px;
+}
+
+/* section-c */
+.section-c-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 13px;
+}
+
+.section-c .item-list-container {
+    height: 364px;
+}
+
+.section-c .total {
+    font-size: 12px;
+    line-height: 17px;
+    text-align: right;
+    margin-top: 6px;
 }

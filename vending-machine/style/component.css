@@ -15,6 +15,11 @@
 body {
     background-color: var(--main-color);
 }
+@media (max-width: 360px) {
+    body {
+        background-color: #fff;
+    }
+}
 
 p {
     margin: 0;
@@ -43,8 +48,8 @@ li {
 
 /* 자판기 아이템 */
 .vm-item {
-    /* width: 94px;
-    height: 130px; */
+    width: 100%;
+        box-sizing: border-box;
     border-radius: 10px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 
@@ -59,9 +64,6 @@ li {
 .vm-item .name {
     font-size: 9px;
     line-height: 13px;
-}
-
-.vm-item .name {
     margin-top: 6px;
     margin-bottom: 7px;
 }
@@ -77,6 +79,7 @@ li {
 
 /* 선택 목록 중 하나 아이템 */
 .vm-item-li {
+    width: auto;
     display: flex;
     align-items: center;
     padding: 8px;
@@ -123,6 +126,7 @@ li {
     align-items: center;
     border-radius: 5px;
     padding: 6px 10px;
+    width: auto;
 }
 
 .info .title {
