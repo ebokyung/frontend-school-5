@@ -50,7 +50,6 @@
 		header {
 			display: flex;
 			align-items: center;
-			gap: 24px
 		}
 		
 		main .project-list {
@@ -72,7 +71,8 @@
 		/* style */
 		header .title {
 			color: #fff;
-			width: 26%;
+			flex-basis: 26%;
+				flex-shrink: 0;
 		}
 		
 		header .title span {
@@ -99,12 +99,13 @@
 			transform: translateY(-50%);
 		}
 		
-		/* .project-list .item {
-							width: auto;
-						} */
+.project-list .item {
+	display: block;
+}
 		
 		.project-list .item-img {
-			width: 26%;
+			flex-basis: 26%;
+				flex-shrink: 0;
 			position: relative;
 		}
 		
@@ -134,8 +135,8 @@
 		}
 		
 		.project-list .item-content {
-			/* 가로 가득채우는 방법? */
-			/* width: auto; */
+			/* 가로 가득채우는 방법? 해결*/
+				flex-grow: 1;
 			padding: 24px;
 			display: flex;
 			flex-direction: column;
