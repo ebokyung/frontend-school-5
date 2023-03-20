@@ -1,0 +1,281 @@
+:root {
+    --main-color: #F2F2F2;
+    --border-color: #BDBDBD;
+}
+
+/* reset */
+ul,
+li {
+    list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: 0;
+    background: none;
+    font: inherit;
+}
+
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+
+/* layout */
+.wrapper {
+    width: 1060px;
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    background-color: var(--main-color);
+    padding: 24px;
+    margin: 86px auto 135px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* header */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+header span {
+    display: inline-block;
+    width: 650px;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 37px 0 28px 0;
+}
+
+.cinema-nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.cinema-nav button {
+    padding: 10px 20px;
+    color: #828282;
+}
+
+.cinema-nav button.active {
+    font-weight: bold;
+    color: #000;
+}
+
+
+/* main */
+main {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 24px 23px;
+    background-color: #fff;
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 28px;
+}
+
+.movie-card {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card-content {
+    padding: 19px 20px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-card-content img {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    /* 이미지 비율 유지 */
+    aspect-ratio: 180/250;
+    /*  꽉 차게 확대(찌부되지 않게) */
+    object-fit: cover;
+    /*  */
+    /* width: 100%; */
+}
+
+.ellipsis {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movie-card-content .title {
+    margin: 12px 0;
+    font-size: 16px;
+}
+
+.movie-info {
+    font-size: 13px;
+
+    /* 방법1. flex */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+/* 방법2. float */
+/* .movie-info li {
+    clear: both;
+}
+.movie-info .abstract {
+    float: left;
+}
+.movie-info .grade {
+    float: right;
+} */
+
+
+.movie-info li :first-child {
+    color: #828282;
+    margin-right: 5px;
+}
+
+.movie-info .star {
+    background: url(./img/icon-star.svg) no-repeat 0 0 / 1em;
+    padding-left: 1.3em;
+}
+
+
+/* main button */
+.movie-card-button {
+    border-top: 1px solid var(--border-color);
+    display: flex;
+}
+
+.movie-card-button a,
+.movie-card-button button {
+    background-color: #F2F2F2;
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.movie-card-button a {
+    border-radius: 0 0 0 10px;
+    border-right: 1px solid var(--border-color);
+}
+
+.movie-card-button a:focus {
+    z-index: 1;
+}
+
+.movie-card-button button {
+    border-radius: 0 0 10px 0;
+}
+
+.movie-card-button button::before {
+    content: '';
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    background: url(./img/icon-play.svg) no-repeat 0 50% / 1em;
+}
+
+
+/* footer */
+footer {
+    width: 100%;
+    height: 213px;
+    background-color: var(--main-color);
+    color: #4F4F4F;
+}
+
+footer h2 {
+    color: #000;
+    font-size: 22px;
+}
+
+footer .footer-top,
+footer .footer-bottom {
+    width: 1189px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-top {
+    height: 120px;
+    border-bottom: 2px solid var(--border-color);
+    box-sizing: border-box;
+}
+
+.footer-top ul {
+    display: flex;
+    gap: 22px;
+}
+
+.footer-bottom ul {
+    display: flex;
+}
+
+.footer-bottom li {
+    margin: 36px 0 30px;
+    padding: 0 10px;
+    border-left: 1px solid #4f4f4f;
+    font-size: 14px;
+}
+
+.footer-bottom li:first-child {
+    margin-left: 0;
+    border-left: 0;
+}
+
+.footer-bottom strong {
+    padding-right: 5px;
+}
+
+.footer-bottom p {
+    font-weight: bold;
+    font-size: 14px;
+}
