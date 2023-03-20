@@ -25,36 +25,37 @@
                 <h2 class="a11y-hidden">자판기</h2>
                 <section class="sale-items">
                     <h3 class="a11y-hidden">물건 고르기</h3>
-                    <div class="vm-item">
+                    <!-- class='selected sold-out' 유무로 제어할 예정 -->
+                    <button class="vm-item selected" type="button">
                         <img class="img" src="./img/cola_original.svg" alt="original-cola">
                         <p class="name">Original_Cola</p>
                         <p class="price">1000원</p>
-                    </div>
-                    <div class="vm-item sold-out">
+                    </button>
+                    <button class="vm-item sold-out" type="button">
                         <img class="img" src="./img/cola_violet.svg" alt="violet-cola">
                         <p class="name">Violet_Cola</p>
                         <p class="price">1000원</p>
-                    </div>
-                    <div class="vm-item">
+                    </button>
+                    <button class="vm-item" type="button">
                         <img class="img" src="./img/cola_yellow.svg" alt="yellow-cola">
                         <p class="name">Yellow_Cola</p>
                         <p class="price">1000원</p>
-                    </div>
-                    <div class="vm-item">
+                    </button>
+                    <button class="vm-item" type="button">
                         <img class="img" src="./img/cola_cool.svg" alt="cool-cola">
                         <p class="name">Cool_Cola</p>
                         <p class="price">1000원</p>
-                    </div>
-                    <div class="vm-item">
+                    </button>
+                    <button class="vm-item selected" type="button">
                         <img class="img" src="./img/cola_green.svg" alt="green-cola">
                         <p class="name">Green_Cola</p>
                         <p class="price">1000원</p>
-                    </div>
-                    <div class="vm-item">
+                    </button>
+                    <button class="vm-item" type="button">
                         <img class="img" src="./img/cola_orange.svg" alt="violet-cola">
                         <p class="name">Orange_Cola</p>
                         <p class="price">1000원</p>
-                    </div>
+                    </button>
                 </section>
                 <section class="checkout">
                     <h3 class="a11y-hidden">계산하기</h3>
@@ -72,8 +73,8 @@
                     <ul class="item-list-container">
                         <li>
                             <div class="vm-item-li">
-                                <img class="img" src="./img/cola_violet.svg" alt="violet-cola">
-                                <p class="name">Violet_Cola</p>
+                                <img class="img" src="./img/cola_original.svg" alt="original-cola">
+                                <p class="name">Original_Cola</p>
                                 <p class="count"><span>1</span></p>
                             </div>
                         </li>
@@ -131,7 +132,7 @@
                         </div>
                     </li>
                 </ul>
-                <p class="total">총 금액: <span>9000원</span></p>
+                <p class="total">총 금액: <span>9,000원</span></p>
             </section>
         </main>
         </div>

@@ -33,6 +33,10 @@ li {
     margin: 0;
 }
 
+button {
+    border: none;
+    background: #fff;
+}
 .a11y-hidden {
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
@@ -49,7 +53,7 @@ li {
 /* 자판기 아이템 */
 .vm-item {
     width: 100%;
-        box-sizing: border-box;
+    box-sizing: border-box;
     border-radius: 10px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 
@@ -59,10 +63,11 @@ li {
     align-items: center;
 
     padding: 10px 12px;
-position: relative;
+    position: relative;
 }
 
-.vm-item:active {
+.selected,
+.vm-item:not(.sold-out):hover {
     box-shadow: 0 0 0 3px var(--point-color);
 }
 
@@ -186,7 +191,7 @@ position: relative;
 
 /* 선택 목록 전체 컨테이너 */
 .item-list-container {
-    padding: 12px;
+    padding: 12px 6px 12px 12px;
     overflow-y: scroll;
 
     background-color: var(--main-color);
@@ -195,14 +200,18 @@ position: relative;
 }
 
 .item-list-container::-webkit-scrollbar {
-    width: 6px;
-    background-color: transparent;
+    width: 10px;
+}
+.item-list-container::-webkit-scrollbar-track {
+    background-color: var(--main-color);
+}
+.item-list-container::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: #fff;
+    border: 3px solid transparent;
+        background-clip: padding-box;
 }
 
-.item-list-container::-webkit-scrollbar-thumb {
-    background-color: #fff;
-    border-radius: 10px;
-}
 
 .item-list-container li {
     margin-bottom: 6px;

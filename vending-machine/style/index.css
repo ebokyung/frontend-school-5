@@ -90,7 +90,7 @@ header .logo {
 .section-a .checkout {
     width: 100%;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 200px 94px;
     grid-template-rows: 32px 32px 106px;
     gap: 12px;
 }
@@ -99,12 +99,16 @@ header .logo {
     padding: 6px;
     border: 1px solid #BDBDBD;
     border-radius: 5px;
+    line-height: 19px;
 }
 
 .section-a .checkout .input-cash::placeholder {
     color: #BDBDBD;
     font-size: 13px;
     line-height: 19px;
+}
+.section-a .checkout .input-cash:focus {
+    outline-color: var(--point-color);
 }
 
 .section-a .checkout .btn.get {
