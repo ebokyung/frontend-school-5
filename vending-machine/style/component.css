@@ -181,9 +181,7 @@ button {
     align-items: center;
 
     border-style: none;
-}
-
-.btn p {
+    
     font-size: 13px;
     line-height: 19px;
 }
