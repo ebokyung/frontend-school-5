@@ -36,6 +36,7 @@ li {
 button {
     border: none;
     background: #fff;
+    cursor: pointer;
 }
 .a11y-hidden {
     clip: rect(1px, 1px, 1px, 1px);
