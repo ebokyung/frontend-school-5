@@ -14,7 +14,8 @@ h1,
 h2,
 h3,
 p,
-ul {
+ul,
+body {
 	padding: 0;
 	margin: 0;
 }
@@ -22,6 +23,7 @@ ul {
 li {
 	list-style: none;
 }
+
 
 .a11y-hidden {
 	clip: rect(1px, 1px, 1px, 1px);
@@ -37,7 +39,8 @@ li {
 
 /* layout */
 .wrapper {
-	width: 1080px;
+	width: calc(100% - 60px);
+		max-width: 1080px;
 	margin: 100px auto;
 
 	display: flex;
@@ -48,6 +51,7 @@ li {
 header {
 	display: flex;
 	align-items: center;
+	gap: 24px;
 }
 
 main .project-list {
@@ -69,8 +73,8 @@ main .project-list .item:nth-child(even) {
 /* style */
 header .title {
 	color: #fff;
-	flex-basis: 26%;
-	flex-shrink: 0;
+	margin-top: -8px;
+	white-space: nowrap;
 }
 
 header .title span {
@@ -78,27 +82,9 @@ header .title span {
 }
 
 header .desc {
-	padding: 24px 24px 24px 124px;
 	position: relative;
 	color: var(--point-color);
 	font-size: 14px;
-}
-
-header .desc::before {
-	content: '';
-	display: block;
-	width: 100px;
-	height: 2px;
-	background-color: var(--point-color);
-
-	position: absolute;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-}
-
-.project-list .item {
-	display: block;
 }
 
 .project-list .item-img {
@@ -118,8 +104,11 @@ header .desc::before {
 }
 
 .project-list .item-img img {
-	width: 100%;
 	vertical-align: top;
+	aspect-ratio: 1200/800;
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
 }
 
 .project-list .item-img p {
@@ -158,6 +147,11 @@ header .desc::before {
 
 	position: relative;
 	padding-left: 20px;
+	padding-bottom: 10px;
+}
+	
+.item-content .item-content-list li:last-child {
+	padding-bottom: 0;
 }
 
 .item-content .item-content-list li::before {
@@ -168,7 +162,40 @@ header .desc::before {
 	border-radius: 50%;
 
 	position: absolute;
-	top: 50%;
+	top: 10px;
 	left: 0;
 	transform: translateY(-50%);
+}
+
+
+/* media */
+@media (max-width: 519px) {
+	main .project-list .item,
+	main .project-list .item:nth-child(even) {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+}
+@media (max-width: 860px) {
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+@media (min-width: 861px) {
+	.desc::before {
+		content: '';
+		display: block;
+		width: 100px;
+		height: 2px;
+		background-color: var(--point-color);
+
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.desc {
+			padding-left: 124px;
+		}
 }
