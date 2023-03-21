@@ -15,13 +15,10 @@
 body {
     background-color: var(--main-color);
 }
-@media (max-width: 360px) {
-    body {
-        background-color: #fff;
-    }
-}
 
-p {
+p,
+h1,
+h2 {
     margin: 0;
     padding: 0;
 }
@@ -38,6 +35,11 @@ button {
     background: #fff;
     cursor: pointer;
 }
+*:focus {
+    outline-color: var(--point-color);
+}
+
+/* 접근성을 위한 숨김처리 */
 .a11y-hidden {
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
@@ -57,56 +59,57 @@ button {
     box-sizing: border-box;
     border-radius: 10px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     padding: 10px 12px;
     position: relative;
 }
 
-.selected,
-.vm-item:not(.sold-out):hover {
+.selected {
     box-shadow: 0 0 0 3px var(--point-color);
 }
 
-.vm-item.sold-out::before,
-.vm-item.sold-out::after {
-    content: '';
-    display: inline-block;
-    position: absolute;
+.vm-item .img,
+.vm-item .name,
+.vm-item .price {
+    display: block;
 }
 
-.vm-item.sold-out::before {
-    background-color: rgba(0, 0, 0, 0.8);
-    inset: 0;
-    border-radius: 10px;
+.vm-item .img {
+    margin: auto;
 }
 
-.vm-item.sold-out::after {
-    width: 100%;
-    height: 50%;
-    background: url(../img/soldout.svg) no-repeat center center;
-}
 .vm-item .name {
     font-size: 9px;
-    line-height: 13px;
-    margin-top: 6px;
-    margin-bottom: 7px;
+    margin: 6px 0;
 }
 
 .vm-item .price {
     background-color: var(--point-color);
     border-radius: 50px;
-    padding: 5px 15px;
+    padding: 5px 0;
     color: #fff;
-
+    
     font-size: 12px;
 }
 
-/* 선택 목록 중 하나 아이템 */
+.sold-out {
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.sold-out span {
+    display: inline-block;
+    color: #eae8fe;
+    border: 6px double #eae8fe;
+    padding: 0 8px;
+    transform: rotate(-20deg) translate(-15px, 40px);
+}
+
+/* 구매 목록 중 하나 */
 .vm-item-li {
     width: auto;
     display: flex;
@@ -124,7 +127,6 @@ button {
 
 .vm-item-li .name {
     font-size: 9px;
-    line-height: 13px;
 }
 
 .vm-item-li .count {
@@ -144,7 +146,6 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 14px;
-    line-height: 20px;
 }
 
 /* 잔액, 소지금 안내 */
@@ -155,18 +156,18 @@ button {
     align-items: center;
     border-radius: 5px;
     padding: 6px 10px;
-    width: auto;
 }
 
 .info .title {
     font-size: 14px;
-    line-height: 20px;
+}
+
+.info .title::after {
+    content: " :";
 }
 
 .info .cash {
-    /* font-weight: 700; */
     font-size: 14px;
-    line-height: 20px;
 }
 
 /* 버튼 */
@@ -184,12 +185,12 @@ button {
     border-style: none;
     
     font-size: 13px;
-    line-height: 19px;
+
 }
 
 
-/* 선택 목록 전체 컨테이너 */
-.item-list-container {
+/* 전체 구매 목록 */
+.vm-item-ul {
     padding: 12px 6px 12px 12px;
     overflow-y: scroll;
 
@@ -197,14 +198,14 @@ button {
     border: 1px solid #BDBDBD;
     border-radius: 5px;
 }
-
-.item-list-container::-webkit-scrollbar {
+/* 비표준 스크롤 디자인 */
+.vm-item-ul::-webkit-scrollbar {
     width: 10px;
 }
-.item-list-container::-webkit-scrollbar-track {
+.vm-item-ul::-webkit-scrollbar-track {
     background-color: var(--main-color);
 }
-.item-list-container::-webkit-scrollbar-thumb {
+.vm-item-ul::-webkit-scrollbar-thumb {
     border-radius: 50px;
     background-color: #fff;
     border: 3px solid transparent;
@@ -212,10 +213,10 @@ button {
 }
 
 
-.item-list-container li {
+.vm-item-li {
     margin-bottom: 6px;
 }
 
-.item-list-container li:last-child {
+.vm-item-li:last-child {
     margin-bottom: 0;
 }

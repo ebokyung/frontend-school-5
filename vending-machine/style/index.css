@@ -1,11 +1,10 @@
-h2 {
-    margin: 0;
-}
 /* layout */
 .wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 750px;
+        margin: 0 auto 170px;
 }
 
 main {
@@ -13,13 +12,15 @@ main {
     grid-template-areas:
         "a b"
         "a c";
-    grid-template-rows: 50px 474px;
-    grid-template-columns: repeat(2, 360px);
+    grid-template-rows: 50px auto;
+        grid-template-columns: 1fr 1fr;
         gap: 20px;
 }
 .section-a,
 .section-b,
 .section-c {
+    min-width: 360px;
+        box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,57 +41,32 @@ main {
     grid-area: c;
     padding: 25px 27px;
 }
-@media (max-width: 360px) {
-    main {
-        display: grid;
-        grid-template-areas:
-            "a"
-            "b"
-            "c";
-        grid-template-rows: 545px 50px 474px;
-            gap: 0;
-    }
-}
+
 
 /* style  */
-.wrapper {
-    width: 750px;
-    margin: 0 auto 170px;
-}
-
 header {
     margin-bottom: 67px;
 }
-
-header .logo {
-    display: block;
-    margin: auto;
+h1 {
+    text-align: center;
 }
 
-@media (max-width: 360px) {
-    .wrapper {
-        width: auto;
-        min-width: 306px;
-        margin: 0;
-    }
-
-    header .logo {
-        width: 165px;
-    }
+h1 img {
+    /* width: 386px; */
+    max-width: calc(100% - (97px * 2));
 }
-/* section-a */
+
+/* section-a 자판기 */
 .section-a .sale-items {
-    width: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
     margin-bottom: 20px;
 }
-
+/* section-a 계산하기 */
 .section-a .checkout {
-    width: 100%;
     display: grid;
-    grid-template-columns: 200px 94px;
+    grid-template-columns: auto calc((100% - 24px) / 3);
     grid-template-rows: 32px 32px 106px;
     gap: 12px;
 }
@@ -107,15 +83,16 @@ header .logo {
     font-size: 13px;
     line-height: 19px;
 }
-.section-a .checkout .input-cash:focus {
-    outline-color: var(--point-color);
-}
 
 .section-a .checkout .btn.get {
     background-color: var(--point-color);
     color: #fff;
 }
 /* section-c */
+.section-c {
+    display: flex;
+    flex-direction: column;
+}
 .section-c-title {
     text-align: center;
     font-weight: 700;
@@ -124,8 +101,9 @@ header .logo {
     margin-bottom: 13px;
 }
 
-.section-c .item-list-container {
-    height: 364px;
+.section-c .vm-item-ul {
+    /* height: 364px; */
+    flex-grow: 1;
 }
 
 .section-c .total {
@@ -133,4 +111,26 @@ header .logo {
     line-height: 17px;
     text-align: right;
     margin-top: 8px;
+}
+/* 반응형 */
+@media (max-width: 764px) {
+    body {
+        background-color: #fff;
+    }
+
+    main {
+        grid-template-areas:
+            "a"
+            "b"
+            "c";
+        grid-template-rows: 545px 50px 474px;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .wrapper {
+        width: auto;
+        min-width: 360px;
+        margin: 0;
+    }
 }
