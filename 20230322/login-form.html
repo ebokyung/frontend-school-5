@@ -18,16 +18,20 @@
         </header>
         <main>
             <p class="intro">위니브에서 여러분의 궁금증을 해결하세요! :)</p>
-            <section>
+            <section class="form-login">
                 <h2 class="a11y-hidden">로그인 입력창</h2>
-                <form class="form-login">
-                    <input class="input" id="inputId" type="text" placeholder="아이디"><label class="lable-id"
-                        for="inputId"></label>
-                    <span>아이디를 입력해 주세요.</span>
-                    <input class="input" id="inputPw" type="password" placeholder="비밀번호"><label class="lable-pw"
-                        for="inputPw"></label>
-                    <span>아이디 혹은 비밀번호가 일치하지 않습니다.</span>
-                    <input class="txt-hide input-hold" type="checkbox" id="inputHold"><label for="inputHold">로그인 상태
+                <form>
+                    <fieldset>
+                        <input class="input" id="inputId" type="text" placeholder="아이디" required>
+                        <label class="txt-hide" for="inputId">아이디</label>
+                        <strong>아이디를 입력해 주세요.</strong>
+                    </fieldset>
+                    <fieldset>
+                        <input class="input" id="inputPw" type="password" placeholder="비밀번호" required>
+                        <label class="txt-hide" for="inputPw">비밀번호</label>
+                        <strong>아이디 혹은 비밀번호가 일치하지 않습니다.</strong>
+                    </fieldset>
+                    <input class="txt-hide input-hold" type="checkbox" id="inputHold"><label class="label-hold" for="inputHold">로그인 상태
                         유지</label>
                     <button class="btn-login" type="submit">로그인</button>
                 </form>
@@ -35,19 +39,19 @@
             <section class="user-util">
                 <h2 class="a11y-hidden">회원가입 및 아이디/비밀번호 찾기</h2>
                 <a href="#">회원가입</a>
+                <span></span>
                 <a href="#">아이디/비밀번호 찾기</a>
             </section>
-            <div>또는</div>
-            <section>
+            <section class="social-login">
                 <h2 class="a11y-hidden">SNS 간편 로그인</h2>
                 <ul>
-                    <li><button type="button">구글 계정으로 로그인</button></li>
-                    <li><button type="button">페이스북 계정으로 로그인</button></li>
-                    <li><button type="button">네이버 계정으로 로그인</button></li>
-                    <li><button type="button">카카오 계정으로 로그인</button></li>
+                    <li><button type="button" class="btn-sns-login google">구글 계정으로 로그인</button></li>
+                    <li><button type="button" class="btn-sns-login facebook">페이스북 계정으로 로그인</button></li>
+                    <li><button type="button" class="btn-sns-login naver">네이버 계정으로 로그인</button></li>
+                    <li><button type="button" class="btn-sns-login kakao">카카오 계정으로 로그인</button></li>
                 </ul>
             </section>
-            <div>닫기</div>
+            <button class="btn-close-login"></button>
         </main>
 
     </div>
