@@ -1,0 +1,136 @@
+/* reset */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+.txt-hide {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* layout */
+.wrapper {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+/*  */
+header {
+    width: 100%;
+    height: 58px;
+    border-bottom: 1px solid #C4C4C4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 16px;
+}
+
+main {
+    padding: 20px;
+}
+
+main .intro {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+main .form-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-login .input {
+    padding: 15px 16px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #C4C4C4;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/* 로그인 상태 유지 checkbox custom */
+.lable-hold {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.lable-hold::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    vertical-align: bottom;
+    border: 1px solid black;
+}
+
+.input-hold:focus-visible+.lable-hold::before {
+    outline: 2px solid #000;
+    outline-offset: 5px;
+}
+
+.lable-hold::after {
+    position: absolute;
+    top: 2px;
+    left: 22px;
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(./images/) no-repeat 0 0 / 22px;
+    transition: 0.3s ease;
+    opacity: 0;
+}
+
+.input-hold:checked+.lable-hold::after {
+    left: 1px;
+    opacity: 1;
+}
+
+/*  */
