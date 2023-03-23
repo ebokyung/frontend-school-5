@@ -1,0 +1,225 @@
+:root {
+    --main-color: #673399;
+    --point-color: #bd8fe8;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    background-color: var(--main-color);
+}
+
+/* reset */
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+
+/*  */
+.section {
+    padding: 100px 0;
+}
+
+.section-purple {
+    background-color: var(--main-color);
+}
+
+.section-pink {
+    background-color: seashell;
+}
+
+.wrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+/* header */
+.section-header {
+    display: flex;
+    align-items: center;
+}
+
+.section-header .title-headings {
+    flex-basis: 26%;
+    flex-shrink: 0;
+    white-space: nowrap;
+
+    margin-top: -8px;
+    font-size: 40px;
+}
+
+.section-purple .section-header .title-headings {
+    color: #fff;
+}
+
+.section-pink .section-header .title-headings {
+    color: salmon;
+}
+
+.section-header .title-headings span {
+    box-shadow: inset 0 -0.5em orangered;
+}
+
+.section-header .title-desc {
+    font-size: 14px;
+    color: var(--point-color);
+    display: flex;
+    align-items: center;
+}
+
+.title-desc::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    flex-shrink: 0;
+    background-color: currentColor;
+    margin-right: 20px;
+}
+
+.section-header .title-btn {
+    background-color: orangered;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 0 rgb(165, 44, 0);
+    margin-left: auto;
+}
+
+
+/* contents */
+.section-contents .project-list,
+.section-contents .event-list {
+    display: flex;
+    gap: 24px;
+}
+
+.section-contents .project-list {
+    flex-direction: column;
+}
+
+.project-list .item,
+.event-list .item {
+    background-color: #fff;
+    display: flex;
+}
+
+.event-list .item {
+    flex-direction: column;
+}
+
+.project-list .item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-list .item-img {
+    flex-basis: 26%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.project-list .item-img img,
+.event-list .item-img img {
+    vertical-align: top;
+    aspect-ratio: 1200/800;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.project-list .item-img p {
+    color: #fff;
+    font-size: 30px;
+
+    /* 글 중앙정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 이미지에 가상요소 말고 글에 바로 배경색 넣기 */
+    position: absolute;
+    inset: 0;
+    background-color: rgba(103, 51, 153, 0.5);
+}
+
+.project-list .item-content,
+.event-list .item-content {
+    flex-grow: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.event-list .item-content .item-content-title {
+    font-size: 24px;
+}
+
+
+.project-list .item-content .item-content-title {
+    color: var(--main-color);
+    font-size: 18px;
+}
+
+.project-list .item-content .item-content-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-list .item-content .item-content-list li {
+    font-size: 14px;
+
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.project-list .item-content .item-content-list li:last-child {
+    margin-bottom: 0;
+}
+
+.project-list .item-content .item-content-list li::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--point-color);
+    border-radius: 50%;
+
+    position: absolute;
+    top: 10px;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+/* 1. */
