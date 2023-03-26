@@ -283,26 +283,41 @@ a {
     left: 0;
     transform: translateY(-50%);
 }
+
 /* 반응형 */
 @media (max-width: 850px) {
-    .project-list .item-cover {
-        flex-basis: 0;
-        height: 250px;
+    /* pink */
+        .section-contents .event-list {
+            flex-direction: column;
     }
 
-    .project-list .item,
-    .project-list .item:nth-child(even) {
-        flex-direction: column;
-        justify-content: flex-start;
+        .event-list .item {
+            width: 100%;
     }
 
+        .event-list .item-content-title {
+            min-height: auto;
+        }
+    
+        /* purple */
     .title-desc::before {
         content: none;
     }
-
+    
     .section-purple .section-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
     }
+        .project-list .item-cover,
+        .event-list .item-cover {
+            flex-basis: 0;
+            height: 250px;
+        }
+    
+        .project-list .item,
+        .project-list .item:nth-child(even) {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
 }
