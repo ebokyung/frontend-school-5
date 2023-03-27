@@ -1,0 +1,58 @@
+// 보경
+// @mixin container-flex($justify-content: center, $align-items: center) {
+//     display: flex;
+//     justify-content: $justify-content;
+//     align-items: $align-items;
+// }
+
+// @mixin item-size($value: 1) {
+//     width: 100px * $value;
+//     height: 100px * $value;
+//     border-radius: 10% * $value;
+// }
+
+
+// .card {
+//     @include container-flex;
+
+//     &-item {
+//         @include item-size;
+//     }
+// }
+
+// .product {
+//     @include container-flex(right, right);
+
+//     &-item {
+//         @include item-size(2);
+//     }
+// }
+
+// 호준 강사님
+@mixin flex($direction) {
+    display: flex;
+    justify-content: $direction;
+    align-items: $direction;
+}
+
+@mixin item($length, $radius) {
+    width: $length;
+    height: $length;
+    border-radius: $radius;
+}
+
+.card {
+    @include flex(center);
+}
+
+.card-item {
+    @include item(100px, 10%)
+}
+
+.product {
+    @include flex(right);
+}
+
+.product-item {
+    @include item(200px, 25%)
+}

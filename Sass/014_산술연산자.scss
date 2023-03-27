@@ -1,0 +1,21 @@
+.one {
+    font-size: 10px + 10px;
+}
+
+.two {
+    font-size: 30px - 10px;
+}
+
+.three {
+    font-size: 10px * 2;
+}
+
+.four {
+    // (20px / 10px) 아님 이건 2
+    // 리스트에도 슬래시 사용하기 때문에 괄호로 혼동 줄이기
+    font-size: (20px / 10); // 2px
+}
+
+.five {
+    font-size: 8px % 3;
+}
