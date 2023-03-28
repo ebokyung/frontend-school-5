@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 레이아웃 만들기</title>
+
+    <!-- CSS -->
+    <style>
+        header {
+            background: rgb(150 201 242);
+            color: white;
+        }
+        section {
+            background: rgb(72 83 114);
+            color: white;
+        }
+        aside {
+            background: rgb(199 245 67);
+        }
+        footer {
+            background: rgb(255 119 105);
+            color: white;
+
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 400px;
+            justify-content: space-between;
+        }
+        .container-2 {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-grow: 1;
+        }
+        .item-section {
+            flex-grow: 1;
+        }
+        .item-aside {
+            flex-basis: 150px;
+        }
+        header, footer {
+            flex-basis: 50px;
+        }
+
+        /* 텍스트 정렬 */
+        header, section, aside, footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. -->
+    <div class="container">
+        <header>header</header>
+        <div class="container-2">
+            <section class="item-section">section</section>
+            <aside class="item-aside">aside</aside>
+        </div>
+        <footer>footer</footer>
+    </div>
+    <!-- 2. -->
+    <!-- <header>header</header>
+        <div class="container-2">
+            <section class="item-section">section</section>
+            <aside class="item-aside">aside</aside>
+        </div>
+        <footer>footer</footer> -->
+</body>
+</html>

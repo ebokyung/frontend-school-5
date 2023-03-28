@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 만들기</title>
+
+    <!-- CSS -->
+    <style>
+        /* .wrapper {
+            width: 800px;
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr 2fr;
+            grid-template-rows: repeat(4, 1fr);
+        } */
+
+        .btn {
+            width: 88px;
+            height: 32px;
+            background-color: rgba(26, 32, 44, 1);
+            color: rgba(203, 213, 223, 1);
+        }
+
+        .btn:active {
+            text-decoration: underline;
+            box-shadow: inset 1px 1px #262F3E;
+        }
+
+        .btn:hover {
+            text-decoration: underline;
+            color: white;
+        }
+
+        .btn:disabled {
+            box-shadow: none;
+            color: #4A5568;
+            background: #3A4556;
+            border: 1px solid #343e4e;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="wrapper">
+        <p>default</p>
+        <button class="btn btn-basic">Button</button>
+        <button class="btn">Button</button>
+        <button class="btn">Button</button>
+        <p>hover</p>
+        <button class="btn btn-basic">Button</button>
+        <button class="btn">Button</button>
+        <button class="btn">Button</button>
+        <p>active</p>
+        <button class="btn btn-basic">Button</button>
+        <button class="btn">Button</button>
+        <button class="btn">Button</button>
+        <p>disabled</p>
+        <button class="btn btn-basic">Button</button>
+    </div> -->
+    <div>
+        <button class="btn" type="button">Button</button>
+        <button class="btn" type="button" disabled>Button</button>
+    </div>
+</body>
+
+</html>
