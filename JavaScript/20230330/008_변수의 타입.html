@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    <!-- JavaScript -->
+    <script>
+        //---------------------- 원시 타입 ---------------------------
+        // string, number, boolean, undefined, null ***, symbol, bigint
+
+        let str1 = 'hello';
+        let str2 = str1;
+        console.log(str2); // 'hello'
+
+        str1 = 'world';
+        console.log(str2); // str2에 할당된 값은 여전히 'hello' 입니다.
+
+
+        // String
+        console.log(typeof 'hello')
+        console.log(typeof "hello")
+        // 이스케이프 문자
+        // \'   작은따옴표
+        // \"   큰따옴표
+        // \t   가로 탭
+        // \n   줄 바꿈
+        console.log(typeof 'i\'m so happy')
+        console.log('h\ne\nl\nl\no')
+
+        // Number
+        console.log(typeof 10) // number
+        console.log(typeof 10.1) // number
+        console.log(typeof NaN) // number
+
+        // Boolean
+        console.log(typeof true)
+        console.log(typeof false)
+
+        // undefined
+        console.log(typeof undefined)
+        let a;
+        console.log(typeof a)
+
+        // null (값이 비어있음을 명시적으로 나타냄) 
+        // console.log(typeof null) // object 설계 오류인 것을 개발자가 인정.
+        // let score = [10, 20, 30, null, 50];
+
+        // bigint (2^53 - 1보다 큰 정수)
+        // JavaScript 최대치 2^53 - 1.
+        console.log(typeof 90071992547409960n) //bigint
+        console.log(90071992547409960n + 90071992547409960n)
+        console.log(90071992547409960 + 90071992547409960)
+
+        // symbol (고유한 값)
+        console.log(typeof Symbol())
+
+
+        //---------------------- 객체 타입 ---------------------------
+
+        // function
+        console.log(typeof function () { })
+
+        // object
+        console.log(typeof [10, 20, 30]) // 배열 
+        console.log(typeof { a: 10, b: 20, c: 30 }) // 객체
+        console.log(typeof /정규표현식/gi) // 정규표현식
+
+
+        //------------------------ 형 변환 -----------------------------
+
+
+        // 형변환(다른 type -> number)
+        console.log(+'10')
+        console.log(Number('10')) // 권하지 않습니다.
+        console.log(parseInt('10')) // 권합니다.
+        console.log(parseFloat('10.1')) // 권합니다.
+        console.log(Number(true)) // 1
+        console.log(Number(false)) // 0
+        console.log(parseInt(true)) // NaN
+        console.log(parseInt(false)) // NaN
+
+        // 형변환(다른 type -> string)
+        let hojun = 10;
+        console.log(hojun.toString()) // 권합니다.
+        // 주의) 10.toString() 10.까지를 소숫점으로 봅니다.
+        console.log('' + 10)
+        console.log(String(10))
+
+        // 형변환(다른 type -> boolean)
+        let hojun2 = 10;
+        console.log(Boolean(-1));
+        console.log(Boolean(0));
+        console.log(Boolean(1000));
+        console.log(!!1000);
+        console.log(!!hojun2);
+    </script>
+</body>
+
+</html>
