@@ -121,7 +121,9 @@ main .intro {
     height: 22px;
     margin-right: 10px;
     vertical-align: bottom;
-    background: url("images/icon_check_empty.png") no-repeat 0 0 / 22px;
+    /* background: url("images/icon_check_empty.png") no-repeat 0 0 / 22px; */
+        /* background: url("images/icon_check_sprites.png") -10px -10px; */
+        background: url('./images/icon_check_sprites_retina.png') -10px -10px /84px 42px;
 }
 
 .input-hold:focus-visible+.label-hold::before {
@@ -137,7 +139,9 @@ main .intro {
     display: inline-block;
     width: 22px;
     height: 22px;
-    background: url("images/icon_check.png") no-repeat 0 0 / 22px;
+    /* background: url("images/icon_check.png") no-repeat 0 0 / 22px; */
+        /* background: url("images/icon_check_sprites.png") -52px -10px; */
+        background: url("./images/icon_check_sprites_retina.png") -52px -10px /84px 42px;
     transition: 0.3s ease;
     opacity: 0;
 }
@@ -227,6 +231,7 @@ main .intro {
     position: relative;
     border-radius: 5px;
     cursor: pointer;
+    padding: 11px 12px;
 }
 
 
@@ -246,6 +251,7 @@ main .intro {
     border: 1px solid #F2C94C;
 }
 
+/* .btn-sns-login::before */
 .google::before,
 .facebook::before,
 .naver::before,
@@ -258,22 +264,32 @@ main .intro {
     display: inline-block;
     width: 22px;
     height: 22px;
+    /* retina */
+        /* background-size: 157px 44px; */
 }
 
 .google::before {
-    background: url(./images/logo_google.png) no-repeat center / contain;
+    /* background: url(./images/logo_google.png) no-repeat center / contain; */
+        /* background: url(./images/logo_sprites.png) -43px -10px; */
+        background: url(./images/logo_sprites_retina.png) -43px -10px / 157px 44px;
 }
 
 .facebook::before {
-    background: url(./images/logo_facebook.png) no-repeat center / contain;
+    /* background: url(./images/logo_facebook.png) no-repeat center / contain; */
+        /* background: url(./images/logo_sprites.png) -6px -10px; */
+        background: url(./images/logo_sprites_retina.png) -6px -10px / 157px 44px;
 }
 
 .naver::before {
-    background: url(./images/logo_naver.png) no-repeat center/ contain;
+    /* background: url(./images/logo_naver.png) no-repeat center/ contain; */
+        /* background: url(./images/logo_sprites.png) -127px -10px; */
+        background: url(./images/logo_sprites_retina.png) -125px -10px / 157px 44px;
 }
 
 .kakao::before {
-    background: url(./images/logo_kakao.png) no-repeat center / contain;
+    /* background: url(./images/logo_kakao.png) no-repeat center / contain; */
+        /* background: url(./images/logo_sprites.png) -85px -10px; */
+        background: url(./images/logo_sprites_retina.png) -84px -10px / 157px 44px;
 }
 
 .btn-close-login {
