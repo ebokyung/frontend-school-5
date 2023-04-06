@@ -30,8 +30,8 @@ console.log(height3 || 'hello')
 console.log(height3 ?? 'world')
 
 // 아래 내용은 지금 모르셔도 괜찮습니다.
-// || : 0, null, undefined
+// || : 0, null, undefined, "", NaN, false etc ...
 // ?? : null, undefined
 
-// falsy 하다 : 0, null, undefined, "", NaN
-// nullish gkek : null, undefined
+// falsy 하다 : 0, null, undefined, "", NaN, false etx ...
+// nullish 하다 : null, undefined
