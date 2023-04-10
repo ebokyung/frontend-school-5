@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 보경</title>
+
+    <!-- CSS -->
+    <style>
+        #canvas {
+            width: 300px;
+            height: 300px;
+            border: 3px solid #eee;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="canvas"></div>
+    <ul>
+        <li><button class="btn-red">빨강</button></li>
+        <li><button class="btn-yellow">노랑</button></li>
+        <li><button class="btn-green">초록</button></li>
+    </ul>
+
+    <!-- JavaScript -->
+    <script>
+        let canvas = document.getElementById('canvas')
+        let btns = document.querySelectorAll('button')
+        // nodeList에 forEach 안먹는 경우가 있으니 주의
+        btns.forEach(btn => btn.addEventListener('click', () => {
+            // console.log(`clicked ${i.className.split('-')[1]}`)
+            bgColor = btn.className.split('-')[1];
+            if (!canvas.classList.contains(`${bgColor}`)) {
+                canvas.className = ''
+                canvas.classList.add(`${bgColor}`)
+            }
+            else {
+                // canvas.classList.remove(`${bgColor}`)
+            }
+        }))
+    </script>
+</body>
+
+</html>
