@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보경</title>
+
+</head>
+
+<body>
+
+    <!-- JavaScript -->
+    <script>
+        class Sausage {
+            constructor(taste1, taste2) {
+                this.t1 = taste1;
+                this.t2 = taste2;
+            }
+
+            taste() {
+                console.log(`${this.t1}와 ${this.t2} 맛이 난다!`)
+            }
+        }
+
+        class FiresSausage extends Sausage {
+            constructor(taste1, taste2) {
+                super(taste1, taste2)
+            }
+
+            taste() {
+                this.taste();
+                console.log(`🔥🔥🔥🔥🔥`)
+            }
+        }
+
+        let sausage = new Sausage('소고기', '파');
+        let fireSausage = new FiresSausage('소고기', '파');
+
+    </script>
+</body>
+
+</html>

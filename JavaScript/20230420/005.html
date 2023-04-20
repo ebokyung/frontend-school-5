@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보경</title>
+
+    <!-- CSS -->
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            border: 1px solid black;
+
+            position: absolute;
+            top: 100px;
+            left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <!-- JavaScript -->
+    <script>
+        const box = document.querySelector('.box');
+        document.body.addEventListener('keyup', (e) => {
+            if (e.keyCode === 37) {
+                console.log('왼')
+                box.style.left = '-20px';
+            }
+            if (e.keyCode === 39) {
+                console.log('오')
+                box.style.left = '+20px';
+            }
+        })
+    </script>
+</body>
+
+</html>

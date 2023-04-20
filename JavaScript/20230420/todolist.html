@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist | 보경</title>
+
+</head>
+
+<body>
+
+    <!-- JavaScript -->
+    <script>
+        class Todo {
+            constructor(item, finished = false) {
+                this.item = item;
+                this.finished = finished;
+            }
+
+            changeState() {
+                this.finished = !this.finished;
+            }
+        }
+
+        class TodoManager {
+            constructor() {
+                this.todoList = []
+            }
+
+            addItem(item) {
+                this.todoList.push(item)
+            }
+            getItems() {
+                return this.todoList;
+            }
+            getLeftTodoCount() {
+                return this.todoList.map(i => i['finished']).filter(i => !i).length;
+            }
+        }
+
+        const todos = new TodoManager()
+
+        const walk = new Todo('달리기', true);
+        const play = new Todo('놀기', true);
+        todos.addItem(walk)
+        todos.addItem(play)
+
+
+    </script>
+</body>
+
+</html>
