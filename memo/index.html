@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 메모장</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <h2 class="a11y-hidden">메모장 글쓰기</h2>
+            <label for="title"></label>
+            <input type="text" id="title" placeholder="제목을 입력해주세요." />
+            <div id="editor"></div>
+            <textarea id="content" cols="30" rows="10" placeholder="내용을 입력해주세요."></textarea>
+            <button onclick="saveNote()">메모</button>
+        </section>
+        <section id="display">
+            <h2 class="a11y-hidden">메모장 전체목록</h2>
+            <ul class="list-item">
+                <li>
+                    <div class="box">
+                        <time datetime="2023-04-20">2023-04-20</time>
+                        <h3>새로운 메모</h3>
+                        <p>내용입니다</p>
+                        <button class="btn-edit" type="button">수정</button>
+                        <button class="btn-del" type="button">삭제</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <time datetime="2023-04-07">2023-04-07</time>
+                        <h3>새로운 메모</h3>
+                        <p>내용입니다</p>
+                        <button class="btn-edit" type="button">수정</button>
+                        <button class="btn-del" type="button">삭제</button>
+                    </div>
+                </li>
+            </ul>
+
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+
+    </script>
+</body>
+
+</html>
