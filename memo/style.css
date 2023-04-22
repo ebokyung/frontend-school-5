@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'Ainmom';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_01@1.0/Ainmom.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 .a11y-hidden {
-    clip: rect(1px, 1px, 1px, 1px);
+clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
     width: 1px;
     height: 1px;
@@ -9,21 +15,113 @@
     position: absolute;
 }
 
+html {
+    font-size: 16px;
+}
 li,
+ul,
 p,
 h1,
 h2,
 h3,
-body {
+body,
+button {
     padding: 0;
     margin: 0;
+box-sizing: border-box;
 }
 
 li {
     list-style: none;
 }
 
-/*  */
-body {
-    background-color: teal;
+button {
+    border: none;
+    border-radius: 4px;
 }
+
+
+/* style */
+body {
+background-color: teal;
+font-family: 'Ainmom';
+}
+
+.l_wrapper {
+    display: flex;
+    gap: 40px;
+    margin: auto;
+    max-width: calc(100% - 60px);
+}
+
+/* main */
+#memo-main {
+    padding-top: 60px;
+    flex-basis: 300px;
+    flex-shrink: 0;
+}
+
+.form-container {
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 20px;
+    position: relative;
+    box-shadow: 5px 5px 1px 0 rgb(31, 31, 31);
+}
+
+.form-container::before {
+    content: '';
+    display: block;
+    width: 91%;
+    height: 40px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(./img/spring.png) repeat-x left / contain;
+}
+
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+#memo-title,
+#memo-content,
+[class^=btn] {
+    font-family: inherit;
+}
+.title-input {
+    padding: 0 1rem;
+    margin-top: 1rem;
+    height: 2rem;
+    border: none;
+}
+
+.content-textarea {
+    padding: 1rem;
+    resize: none;
+    margin: 0.5rem 0;
+    border: none;
+}
+
+.btn-submit {
+    height: 44px;
+}
+
+/* // main */
+
+/* diplay section */
+#memo-display {
+    padding-top: 60px;
+}
+
+.memo-article {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(75 154 154);
+    padding: 15px;
+}
+
+/* // diplay section */
