@@ -38,6 +38,7 @@ li {
 button {
     border: none;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 
@@ -49,6 +50,7 @@ font-family: 'Ainmom';
 
 .l_wrapper {
     display: flex;
+    width: 1224px;
     gap: 40px;
     margin: auto;
     max-width: calc(100% - 60px);
@@ -57,7 +59,7 @@ font-family: 'Ainmom';
 /* main */
 #memo-main {
     padding-top: 60px;
-    flex-basis: 300px;
+    flex-basis: 500px;
     flex-shrink: 0;
 }
 
@@ -121,7 +123,45 @@ font-family: 'Ainmom';
     border-radius: 10px;
     margin-bottom: 20px;
     background-color: rgb(75 154 154);
-    padding: 15px;
-}
+    padding: 2rem;
+    }
+    
+    .article-time {
+        font-size: 1.2rem;
+    }
+    
+    .article-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    
+    .article-content {
+        font-size: 1.5rem;
+        margin: 15px 0 20px;
+    
+    }
+    
+    .article-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .article-buttons>* {
+        width: 60px;
+        padding: 10px;
+    }
+
 
 /* // diplay section */
+/* media */
+@media (max-width: 1024px) {
+    .l_wrapper {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #memo-main {
+        flex-basis: auto;
+    }
+}
