@@ -56,6 +56,8 @@ function render() {
 function addMemo() {
     const title = document.getElementById('memo-title');
     const content = document.getElementById('memo-content');
+    console.log(title.value)
+    console.log(content.value)
 
     // 메모 등록 시간
     const today = new Date();

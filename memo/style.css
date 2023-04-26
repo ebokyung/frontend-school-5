@@ -93,6 +93,7 @@ font-family: 'Ainmom';
 #memo-content,
 [class^=btn] {
     font-family: inherit;
+    font-size: 1.5rem;
 }
 .title-input {
     padding: 0 1rem;
@@ -117,6 +118,7 @@ font-family: 'Ainmom';
 /* diplay section */
 #memo-display {
     padding-top: 60px;
+    width: 100%;
 }
 
 .memo-article {
