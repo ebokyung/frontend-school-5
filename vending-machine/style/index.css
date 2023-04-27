@@ -84,7 +84,7 @@ h1 img {
     line-height: 19px;
 }
 
-.section-a .checkout .btn.get {
+.section-a .checkout .btn-get {
     background-color: var(--point-color);
     color: #fff;
 }
@@ -106,7 +106,7 @@ h1 img {
     flex-grow: 1;
 }
 
-.section-c .total {
+.section-c .total-price {
     font-size: 12px;
     line-height: 17px;
     text-align: right;

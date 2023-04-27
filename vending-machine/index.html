@@ -29,48 +29,15 @@
                 <section>
                     <h3 class="a11y-hidden">물건 고르기</h3>
                     <ul class="sale-items">
-                        <li>
-                            <!-- class='selected' 유무로 제어할 예정 -->
-                            <button class="vm-item selected" type="button">
-                                <img class="img" src="./img/cola_original.svg" alt="original-cola">
-                                <span class="name">Original_Cola</span>
-                                <strong class="price">1000원</strong>
-                                </button></li>
-                                <li><button class="vm-item" type="button">
-                                        <img class="img" src="./img/cola_violet.svg" alt="violet-cola">
-                                        <span class="name">Violet_Cola</span>
-                            <strong class="price">1000원</strong>
-                            <strong class="sold-out"><span>품절</span></strong>
-                            </button></li>
-                            <li><button class="vm-item" type="button">
-                                    <img class="img" src="./img/cola_yellow.svg" alt="yellow-cola">
-                                    <span class="name">Yellow_Cola</span>
-                            <strong class="price">1000원</strong>
-                            </button></li>
-                            <li><button class="vm-item" type="button">
-                                    <img class="img" src="./img/cola_cool.svg" alt="cool-cola">
-                                    <span class="name">Cool_Cola</span>
-                            <strong class="price">1000원</strong>
-                            </button></li>
-                            <li><button class="vm-item selected" type="button">
-                                    <img class="img" src="./img/cola_green.svg" alt="green-cola">
-                                    <span class="name">Green_Cola</span>
-                            <strong class="price">1000원</strong>
-                            </button></li>
-                            <li><button class="vm-item" type="button">
-                                    <img class="img" src="./img/cola_orange.svg" alt="violet-cola">
-                                    <span class="name">Orange_Cola</span>
-                            <strong class="price">1000원</strong>
-                            </button></li>
-                            </ul>
+                    </ul>
                 </section>
                 <section class="checkout">
                     <h3 class="a11y-hidden">계산하기</h3>
                     <div class="info">
                         <p class="title">잔액</p>
-                        <strong class="cash">1,000 원</strong>
+                        <strong class="cash"></strong>
                     </div>
-                    <button class="btn" type="button">
+                    <button class="btn btn-return" type="button">
                         거스름돈 반환
                     </button>
                     <label for="input-cash" class="a11y-hidden">금액 투입(단위:원)</label>
@@ -90,7 +57,7 @@
                             <p class="count"><span>2</span></p>
                         </li>
                     </ul>
-                    <button class="btn get" type="button">
+                    <button class="btn-get" type="button">
                         획득
                     </button>
                 </section>
@@ -130,12 +97,14 @@
                             <p class="count"><span>5</span></p>
                     </li>
                 </ul>
-                <p class="total">총 금액: <span>9,000원</span></p>
+                <p class="total-price">총 금액: <span>9,000원</span></p>
             </section>
             <!-- section c -->
         </main>
         <!-- //main -->
         </div>
+<!-- JavaScript -->
+<script type="module" src="js/index.js"></script>
 </body>
 
 </html>
