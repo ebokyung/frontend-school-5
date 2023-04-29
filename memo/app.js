@@ -104,21 +104,10 @@ function deleteMemo(e) {
     }
 }
 
-// 메모 수정하기
-// function editMemo(){
-//     //...
-// }
-
 memoList.addEventListener('click', e => {
     // 메모 삭제 이벤트
     if (e.target.type === 'button' && e.target.className === 'btn-delete') {
         deleteMemo(e)
         render()
     }
-
-    // 메모 수정 이벤트
-    // if (e.target.type === 'button' && e.target.className === 'btn-edit') {
-    //     editMemo(e)
-    //     render()
-    // }
 })
