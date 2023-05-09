@@ -15,11 +15,6 @@ const startBtn = document.querySelector('.btn-start'), resetBtn = document.query
 
 hour.addEventListener('click', () => {
     hour.textContent = ('00' + (parseInt(hour.textContent) + 1)).slice(-2);
-    if (hour.textContent == 23) {
-        hour.textContent = '00'
-    } else {
-        hour.textContent = ('00' + (parseInt(hour.textContent) + 10)).slice(-2);
-    }
 }
 );
 
