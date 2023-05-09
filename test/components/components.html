@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>components</title>
+
+    <!-- CSS -->
+    <style>
+        /* time box */
+        .article-time {
+            text-align: center;
+            /* width: fit-content; */
+        }
+
+        .time-title {
+            color: #A5B6EE;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .time-content {
+            width: 80px;
+            height: 80px;
+
+            font-weight: 700;
+            font-size: 40px;
+            color: #fff;
+
+            background: linear-gradient(314.28deg, #304577 0%, #4C65A0 83%);
+            border: 1px solid #354971;
+            border-radius: 4px;
+            padding: 16px 13px;
+        }
+
+        /* button */
+        [class^='btn'] {
+            padding: 16px 23px;
+            border: none;
+            border-radius: 50px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- time box -->
+    <article class="article-time">
+        <h3 class="time-title">HRS</h3>
+        <div class="time-content">00</div>
+    </article>
+
+    <!-- button -->
+    <button type="button" class="btn-start">
+        <img src="../img/icon/icon-start.png" />
+        start
+    </button>
+</body>
+
+</html>
