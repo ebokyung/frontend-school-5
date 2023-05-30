@@ -1,34 +1,19 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bubble sort</title>
+    <title>Document</title>
 </head>
 
 <body>
     <script>
-        // 이 문제는 실제 입사문제로 사용되던 알고리즘 문제입니다.
-        // 배열이 하나 주어졌을때 [3,3,2,4,5,2,1,0,3];
+        // 이 문제는 실제로 입사문제로 사용되던 알고리즘 문제입니다.
+        // 배열이 하나 주어졌을때 [3,2,4,5,2,1,0,3];
         // 함수를 만듭니다. 가장 먼저 반복되는 원소의 값을 반환합니다.
-
-
-        // 풀이 보경.
-        function firstRepeatNum(arr) {
-            const checkArr = new Array(Math.max(...arr)).fill(false);
-            // console.log(checkArr)
-            for (let i = 0; i < arr.length - 1; i++) {
-                if (!checkArr[arr[i]]) checkArr[arr[i]] = true;
-                else return arr[i];
-            }
-        }
-
-        console.log(firstRepeatNum([3, 2, 4, 5, 1, 0]));
-
-
-        // 풀이 재현님.
+        // 반복되는 원소가 없으면 undefined를 반환합니다.
         let arr = [3, 2, 4, 5, 2, 1, 0, 3];
 
         function test(arr) {
